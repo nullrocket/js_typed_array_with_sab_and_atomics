@@ -1,0 +1,14 @@
+override_platforms:
+  chrome:
+    settings:
+      headless: true
+  firefox:
+    settings:
+      headless: true
+
+presets:
+  # Pass "-P debug" to enable debugging configuration
+  debug:
+    pause_after_load: true
+    exclude_tags: undebuggable
+    reporter: expanded

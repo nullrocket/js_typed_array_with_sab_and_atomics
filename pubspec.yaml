@@ -1,0 +1,41 @@
+name: js_typed_array_with_sab_and_atomics
+description: An absolute bare-bones web app.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+
+
+environment:
+  sdk: ^3.4.0
+
+
+# Add regular dependencies here.
+dependencies:
+  web: ^1.0.0
+
+dev_dependencies:
+  build_runner: ^2.4.8
+  build_web_compilers: ^4.0.9
+  lints: ^4.0.0
+  test:
+    git:
+      url: https://github.com/nullrocket/test.git
+      path: pkgs/test
+  build_test: ^2.2.2
+
+
+
+dependency_overrides:
+  test:
+    git:
+      url: https://github.com/nullrocket/test.git
+      path: pkgs/test
+  test_core:
+    git:
+      url: https://github.com/nullrocket/test.git
+      path: pkgs/test_core
+  test_api:
+    git:
+      url: https://github.com/nullrocket/test.git
+      path: pkgs/test_api
+
