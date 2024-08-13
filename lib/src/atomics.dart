@@ -1,17 +1,4 @@
-// ignore_for_file: avoid_web_libraries_in_flutter
 
-
-
-// import 'dart:typed_data';
-// import 'package:js/js.dart';
-// import 'package:js/js_util.dart' as js_util;
-//
-// @JS('Int32Array')
-// external Object? get int32ArrayConstructor;
-//
-// Int32List createSharedArray(Object sab) {
-//   return js_util.callConstructor<Int32List>(int32ArrayConstructor!, [sab]);
-// }
 
 import 'dart:js_interop';
 
