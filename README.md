@@ -8,12 +8,13 @@ JSTypedArray using a SharedArrayBuffer has broken a few times in the past and is
 current test package so this repo uses dependency_overrides to point to a forked version of the test package that has a workaround at https://github.com/nullrocket/test.git  only a few lines have
 been modified to add the following headers to tests.  
 
+```
   Cross-Origin-Embedder-Policy': 'require-corp'   
   Cross-Origin-Opener-Policy': 'same-origin'
-
+```
 
 The tests are normal dart tests using the package:test api, before running tests compile workers with the sdk currently
-being tested.  You need to recompile the workers for every sdk you test against.  The tests only work using the dart2js
+being tested.   The tests only work using the dart2js
 compiler, build.yaml and dart_test.yaml are set up to ensure consistent options are set.
 
 
@@ -27,7 +28,9 @@ as an argument.
 
 
 
-Build workers for test:
+Build workers for test. 
+**You need to recompile the workers for every sdk you test against.** 
+
 ```shell
 dart compile js  ./lib/src/workers/main_worker.dart -o ./test/workers/main_worker.js
 dart compile js  ./lib/src/workers/sub_worker.dart -o ./test/workers/sub_worker.js
